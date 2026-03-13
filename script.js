@@ -17,13 +17,35 @@ tl.to('#hero-title',  { opacity: 1, y: 0, duration: 1.2 }, 0.5)
 
 // ── SCROLL ANIMATIONS ──
 
-// Section reach: heading + subtext
-gsap.utils.toArray('.gsap-fade').forEach((el, i) => {
-  gsap.fromTo(el,
-    { opacity: 0, y: 32 },
-    { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out', delay: i * 0.1,
-      scrollTrigger: { trigger: el, start: 'top 88%' } });
+// Hero shrinks and fades as section-reach scrolls over it
+gsap.to('.hero', {
+  scale: 0.82,
+  opacity: 0,
+  transformOrigin: 'center center',
+  ease: 'none',
+  scrollTrigger: {
+    trigger: '.section-reach',
+    start: 'top bottom',
+    end: 'top top',
+    scrub: true,
+  }
 });
+
+// Section reach: dramatic per-section stagger (h2 then p, each with its own wait)
+document.querySelectorAll('.section-reach').forEach(section => {
+  section.querySelectorAll('.gsap-fade').forEach((el, i) => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 60 },
+      { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out', delay: i * 0.4,
+        scrollTrigger: { trigger: section, start: 'top 75%' } });
+  });
+});
+
+// Video: dramatic fade + push
+gsap.fromTo('.section-video',
+  { opacity: 0, y: 80 },
+  { opacity: 1, y: 0, duration: 1.6, ease: 'power3.out',
+    scrollTrigger: { trigger: '.section-video', start: 'top 88%' } });
 
 // Cards: staggered fade up, icon gets a subtle scale pop
 gsap.utils.toArray('.card').forEach((card, i) => {
