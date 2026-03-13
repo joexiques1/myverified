@@ -74,7 +74,7 @@ sliderDots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i))
 gsap.fromTo('footer',
   { opacity: 0, y: 16 },
   { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
-    scrollTrigger: { trigger: 'footer', start: 'top 95%' } });
+    scrollTrigger: { trigger: '#main-footer', start: 'top 95%' } });
 
 // ── STAGGERED CHAT ──
 const conversation = [
