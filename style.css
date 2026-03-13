@@ -21,7 +21,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Figtree', sans-serif;
   font-weight: 300;
-  background: var(--white);
+  background: var(--dark2);
   color: var(--dark);
   overflow-x: hidden;
 }
@@ -388,12 +388,33 @@ nav.nav-scrolled .nav-logo {
   padding: 22px 52px;
   border-radius: 50px;
   text-decoration: none;
-  transition: background 0.2s, transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .btn-get-started:hover {
-  background: var(--blue-bright);
+  opacity:0.8;
   transform: translateY(-2px);
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+  justify-content:center;
+}
+
+
+.btn-light {
+  background: var(--white);
+  color: var(--blue);
+}
+
+
+.section-slider {
+  position: relative;
+    z-index: 2;
+    padding: 160px 40px 100px;
+    text-align: center;
+    color:white;
 }
 
 /* ── REACH SECTION ── */
@@ -414,12 +435,22 @@ nav.nav-scrolled .nav-logo {
   box-shadow: 0 32px 100px rgba(0, 0, 0, 0.6);
   opacity: 0;
   transform: translateY(70px);
+  border: 5px solid #8f9eb347;
 }
 
 .section-reach h2 {
   font-size: clamp(1.2rem, 2.6vw, 2rem);
   font-weight: 600;
   color: var(--white);
+  max-width: 500px;
+  margin: 0 auto 12px;
+  line-height: 1.2;
+  text-shadow: 0px 20px 200px var(--blue-bright);
+}
+
+.section-slider h2 {
+  font-size: clamp(1.2rem, 2.6vw, 2rem);
+  font-weight: 600;
   max-width: 500px;
   margin: 0 auto 12px;
   line-height: 1.2;
@@ -435,12 +466,21 @@ nav.nav-scrolled .nav-logo {
   line-height: 1.7;
 }
 
+.section-slider > p {
+  color: var(--gray-dim);
+  font-size: 0.8rem;
+  font-weight: 300;
+  max-width: 500px;
+  margin: 0 auto 52px;
+  line-height: 1.7;
+}
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 0px auto 80px;
 }
 
 .card {
@@ -474,6 +514,7 @@ nav.nav-scrolled .nav-logo {
   padding: 56px 56px 40px;
   overflow: hidden;
   opacity: 0;
+  border: 5px solid #8f9eb347;
 }
 
 .section-analytics::before {
@@ -576,8 +617,7 @@ footer {
 }
 
 .footer-logo {
-  height: 36px;
-  width: auto;
+  max-width:180px;
   display: block;
 }
 
