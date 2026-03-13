@@ -25,8 +25,8 @@ gsap.to('.hero-center, #photo-left, #photo-right', {
   ease: 'none',
   scrollTrigger: {
     trigger: '.section-reach',
-    start: 'top bottom',
-    end: 'top top',
+    start: 'top 65%',
+    end: 'top -10%',
     scrub: true,
   }
 });
@@ -69,31 +69,16 @@ gsap.fromTo('.section-analytics',
   { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out',
     scrollTrigger: { trigger: '.section-analytics', start: 'top 85%' } });
 
-gsap.fromTo('.analytics-text h2',
-  { opacity: 0, y: 24 },
-  { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', delay: 0.15,
-    scrollTrigger: { trigger: '.analytics-text', start: 'top 85%' } });
-
-gsap.fromTo('.analytics-text p',
-  { opacity: 0, y: 20 },
-  { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', delay: 0.28,
-    scrollTrigger: { trigger: '.analytics-text', start: 'top 85%' } });
-
-gsap.fromTo('.analytics-slider',
-  { opacity: 0, x: 32 },
-  { opacity: 1, x: 0, duration: 0.85, ease: 'power2.out', delay: 0.2,
-    scrollTrigger: { trigger: '.analytics-slider', start: 'top 85%' } });
-
 // ── SLIDER ──
-const sliderImgs = document.querySelectorAll('.slider-img');
+const slides = document.querySelectorAll('.analytics-slide');
 const sliderDots = document.querySelectorAll('.slider-dot');
 let currentSlide = 0;
 
 function goToSlide(n) {
-  sliderImgs[currentSlide].classList.remove('active');
+  slides[currentSlide].classList.remove('active');
   sliderDots[currentSlide].classList.remove('active');
-  currentSlide = (n + sliderImgs.length) % sliderImgs.length;
-  sliderImgs[currentSlide].classList.add('active');
+  currentSlide = (n + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
   sliderDots[currentSlide].classList.add('active');
 }
 
