@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
@@ -110,27 +111,19 @@
     <h2>Get in-depth analytics on conversations with your clients.</h2>
     <p>Strategic momentum that accelerates growth outcomes and elevates what your organization can achieve.</p>
   </div>
-  <div class="analytics-card">
-    <div class="analytics-card-header">
-      <div class="analytics-logo"><span class="my">my</span>Verified</div>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
-    </div>
-    <div class="analytics-row">
-      <div><div class="analytics-label">Unique Interacted Users</div><div class="analytics-value">132</div></div>
-      <span class="analytics-badge badge-up">↑ 64% from last week</span>
-    </div>
-    <div class="analytics-row">
-      <div><div class="analytics-label">Total Conversations</div><div class="analytics-value">55</div></div>
-      <span class="analytics-badge badge-up">↑ 32% from last week</span>
-    </div>
-    <div class="analytics-row">
-      <div><div class="analytics-label">Avg. Conversation Time</div><div class="analytics-value">5m 22s</div></div>
-      <span class="analytics-badge badge-up">↑ 13% from last week</span>
-    </div>
-    <div class="analytics-row">
-      <div><div class="analytics-label">Total Conversation Time</div><div class="analytics-value">20s</div></div>
-      <span class="analytics-badge badge-neutral">0% from last week</span>
-    </div>
+  <div class="analytics-slider">
+    <img class="slider-img active" src="img/data-slider-1.jpg" alt="Analytics view 1">
+    <img class="slider-img" src="img/data-slider-2.jpg" alt="Analytics view 2">
+    <img class="slider-img" src="img/data-slider-3.jpg" alt="Analytics view 3">
+  </div>
+
+  <button class="slider-arrow slider-prev" aria-label="Previous slide">&#8249;</button>
+  <button class="slider-arrow slider-next" aria-label="Next slide">&#8250;</button>
+
+  <div class="slider-dots">
+    <button class="slider-dot active" aria-label="Slide 1"></button>
+    <button class="slider-dot" aria-label="Slide 2"></button>
+    <button class="slider-dot" aria-label="Slide 3"></button>
   </div>
 </div>
 
