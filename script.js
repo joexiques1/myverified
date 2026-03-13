@@ -18,7 +18,7 @@ tl.to('#hero-title',  { opacity: 1, y: 0, duration: 1.2 }, 0.5)
 // ── SCROLL ANIMATIONS ──
 
 // Hero content shrinks and fades as section-reach scrolls over it (background stays full opacity)
-gsap.to('.hero-center, #photo-left, #photo-right', {
+gsap.to('.hero-center', {
   scale: 0.82,
   opacity: 0,
   transformOrigin: 'center center',
