@@ -155,11 +155,11 @@ nav.nav-scrolled .nav-logo {
 }
 
 .photo-label .person-name {
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: white;
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .photo-label .person-role {
@@ -168,6 +168,7 @@ nav.nav-scrolled .nav-logo {
   color: rgba(255,255,255,0.5);
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  display:none;
 }
 
 /* ── CHAT OVERLAY ── */
@@ -186,7 +187,7 @@ nav.nav-scrolled .nav-logo {
 
 .hero-photo.right .chat-overlay { align-items: center; }
 
-.hero-photo.right .chat-bubble { background: #41495e; }
+.hero-photo.right .chat-bubble { background: #2b2f3a; }
 .hero-photo.right .chat-bubble .bubble-text { color: white; }
 
 .hero-photo.left .chat-overlay { align-items: center; }
@@ -208,12 +209,11 @@ nav.nav-scrolled .nav-logo {
 }
 
 .chat-bubble .bubble-text {
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   font-weight: 300;
   color: #1f232d;
   line-height: 1.55;
   opacity: 0.8;
-  font-style:italic;
 }
 
 .typing-dots {
@@ -368,12 +368,12 @@ nav.nav-scrolled .nav-logo {
 }
 
 .hero-center p {
-  color: var(--gray-dim);
-  font-size: 0.8rem;
-  font-weight: 300;
-  line-height: 1.7;
-  max-width: 330px;
-  margin-bottom: 28px;
+    color: var(--gray-dim);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 400px;
+    margin-bottom: 28px;
 }
 
 .btn-get-started {
