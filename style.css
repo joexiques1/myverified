@@ -379,7 +379,7 @@ nav.nav-scrolled .nav-logo {
 }
 
 .hero-center p {
-  color: white;
+  color: var(--gray-dim);
   font-size: 0.8rem;
   font-weight: 300;
   line-height: 1.7;
