@@ -7,13 +7,13 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ── HERO LOAD-IN ──
-const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
-tl.to('#hero-title',  { opacity: 1, y: 0, duration: 0.7 }, 0.15)
-  .to('#hero-logo',   { opacity: 1, y: 0, duration: 0.7 }, 0.35)
-  .to('#hero-wave',   { opacity: 0.5, y: 0, duration: 0.7 }, 0.52)
-  .to('#hero-sub',    { opacity: 1, y: 0, duration: 0.7 }, 0.70)
-  .to('#photo-left',  { opacity: 1, y: 0, duration: 0.9 }, 0.42)
-  .to('#photo-right', { opacity: 1, y: 0, duration: 0.9 }, 0.55);
+const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+tl.to('#hero-title',  { opacity: 1, y: 0, duration: 1.2 }, 0.5)
+  .to('#hero-logo',   { opacity: 1, y: 0, duration: 1.1 }, 1.0)
+  .to('#hero-wave',   { opacity: 0.5, y: 0, duration: 1.0 }, 1.45)
+  .to('#hero-sub',    { opacity: 1, y: 0, duration: 1.1 }, 1.75)
+  .to('#photo-left',  { opacity: 1, y: 0, duration: 1.5 }, 1.35)
+  .to('#photo-right', { opacity: 1, y: 0, duration: 1.5 }, 1.95);
 
 // ── SCROLL ANIMATIONS ──
 
@@ -142,4 +142,4 @@ function nextMessage() {
   });
 }
 
-setTimeout(nextMessage, 2000);
+setTimeout(nextMessage, 3800);

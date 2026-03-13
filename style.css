@@ -62,7 +62,7 @@ nav.nav-scrolled .nav-logo {
   display: block;
 }
 
-.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links { display: flex; gap: 56px; list-style: none; }
 
 .nav-links a {
   color: rgba(255, 255, 255, 0.65);
@@ -75,7 +75,7 @@ nav.nav-scrolled .nav-logo {
 }
 
 .nav-links a:hover { color: rgba(255, 255, 255, 0.766); }
-.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-right { display: flex; align-items: center; gap: 56px; }
 
 .nav-login {
   color: rgba(255,255,255,0.65);
@@ -105,7 +105,7 @@ nav.nav-scrolled .nav-logo {
 /* ── HERO ── */
 .hero {
   background: var(--hero-gradient);
-  padding-top: 56px;
+  padding-top: 86px;
   min-height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -122,7 +122,7 @@ nav.nav-scrolled .nav-logo {
   overflow: visible;
   z-index: 2;
   opacity: 0;
-  transform: translateY(32px);
+  transform: translateY(70px);
 }
 
 .hero-photo.right { margin: 24px 24px -60px 0; }
@@ -207,10 +207,11 @@ nav.nav-scrolled .nav-logo {
 
 .chat-bubble .bubble-text {
   font-size: 0.62rem;
-  font-weight: 700;
+  font-weight: 300;
   color: #1f232d;
   line-height: 1.55;
   opacity: 0.8;
+  font-style:italic;
 }
 
 .typing-dots {
@@ -254,7 +255,7 @@ nav.nav-scrolled .nav-logo {
   line-height: 1.15;
   margin-bottom: 12px;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(50px);
   padding: 0px 80px;
 }
 
@@ -262,7 +263,7 @@ nav.nav-scrolled .nav-logo {
 .logo-container {
   margin: 0 0 20px;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(50px);
   padding: 0px 80px;
 }
 
@@ -284,7 +285,7 @@ nav.nav-scrolled .nav-logo {
   margin: 0 0 22px;
   padding: 0 4px;
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(30px);
 }
 
 .waveform-wrap .bar {
@@ -371,7 +372,7 @@ nav.nav-scrolled .nav-logo {
 
 .hero-subtext {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(40px);
 
 }
 
