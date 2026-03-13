@@ -215,7 +215,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px 80px;
+  padding: 0px;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -229,6 +229,7 @@ nav {
   margin-bottom: 12px;
   opacity: 0;
   transform: translateY(20px);
+  padding: 0px 80px;
 }
 
 /* ── LOGO SLOT ── */
@@ -236,6 +237,7 @@ nav {
   margin: 0 0 20px;
   opacity: 0;
   transform: translateY(20px);
+  padding: 0px 80px;
 }
 
 .logo-img {
@@ -344,6 +346,7 @@ nav {
 .hero-subtext {
   opacity: 0;
   transform: translateY(16px);
+
 }
 
 .hero-center p {
