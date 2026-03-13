@@ -248,6 +248,7 @@ nav.nav-scrolled .nav-logo {
   text-align: center;
   position: relative;
   z-index: 2;
+  opacity: 0;
 }
 
 .hero-center h1 {
@@ -256,16 +257,12 @@ nav.nav-scrolled .nav-logo {
   color: white;
   line-height: 1.15;
   margin-bottom: 12px;
-  opacity: 0;
-  transform: translateY(50px);
   padding: 0px 80px;
 }
 
 /* ── LOGO SLOT ── */
 .logo-container {
   margin: 0 0 20px;
-  opacity: 0;
-  transform: translateY(50px);
   padding: 0px 80px;
 }
 
@@ -286,8 +283,6 @@ nav.nav-scrolled .nav-logo {
   width: 100%;
   margin: 0 0 22px;
   padding: 0 4px;
-  opacity: 0;
-  transform: translateY(30px);
 }
 
 .waveform-wrap .bar {
@@ -370,12 +365,6 @@ nav.nav-scrolled .nav-logo {
   0%   { transform: scaleY(0.3);  opacity: 0.45; }
   50%  { transform: scaleY(1.15); opacity: 1;    }
   100% { transform: scaleY(0.3);  opacity: 0.45; }
-}
-
-.hero-subtext {
-  opacity: 0;
-  transform: translateY(40px);
-
 }
 
 .hero-center p {

@@ -8,12 +8,9 @@ window.addEventListener('scroll', () => {
 
 // ── HERO LOAD-IN ──
 const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-tl.to('#hero-title',  { opacity: 1, y: 0, duration: 1.2 }, 0.5)
-  .to('#hero-logo',   { opacity: 1, y: 0, duration: 1.1 }, 1.0)
-  .to('#hero-wave',   { opacity: 0.5, y: 0, duration: 1.0 }, 1.45)
-  .to('#hero-sub',    { opacity: 1, y: 0, duration: 1.1 }, 1.75)
-  .to('#photo-left',  { opacity: 1, y: 0, duration: 1.5 }, 1.35)
-  .to('#photo-right', { opacity: 1, y: 0, duration: 1.5 }, 1.95);
+tl.to('.hero-center', { opacity: 1, duration: 0.9 }, 0.3)
+  .to('#photo-left',  { opacity: 1, y: 0, duration: 1.5 }, 1.2)
+  .to('#photo-right', { opacity: 1, y: 0, duration: 1.5 }, 1.8);
 
 // ── SCROLL ANIMATIONS ──
 
