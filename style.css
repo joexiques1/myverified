@@ -121,7 +121,7 @@ nav.nav-scrolled .nav-logo {
   position: relative;
   margin: 24px 0 24px 24px;
   border-radius: 50px;
-  overflow: visible;
+  overflow: hidden;
   z-index: 2;
   opacity: 0;
   transform: translateY(70px);
@@ -134,27 +134,37 @@ nav.nav-scrolled .nav-logo {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 50px;
 }
 
 .photo-gradient {
   position: absolute;
   inset: 0;
-  border-radius: 50px;
-  background: linear-gradient(to bottom, transparent 10%, #0D101B 80%);
+  background: linear-gradient(to bottom, transparent 30%, #0D101B 85%);
   pointer-events: none;
 }
 
-.photo-label {
+.photo-cta {
   position: absolute;
-  bottom: 42px;
-  left: 22px;
-  right: 22px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 3;
-  text-align:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 24px 28px;
+    background: rgb(42 86 180 / 11%);
+    box-shadow: 0 0 40px #0000007a;
+  text-decoration: none;
+  transition: background 0.25s;
 }
 
-.photo-label .person-name {
+.photo-cta:hover {
+  background: var(--blue);
+}
+
+.photo-cta .person-name {
   font-size: 1.4rem;
   font-weight: 600;
   color: white;
@@ -162,19 +172,18 @@ nav.nav-scrolled .nav-logo {
   margin-bottom: 4px;
 }
 
-.photo-label .person-role {
+.photo-cta .person-role {
   font-size: 0.62rem;
   font-weight: 300;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.55);
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  display:none;
 }
 
 /* ── CHAT OVERLAY ── */
 .chat-overlay {
   position: absolute;
-  bottom: 116px;
+  bottom: 140px;
   left: 16px;
   right: 16px;
   display: flex;
