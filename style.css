@@ -217,7 +217,7 @@ nav {
 }
 
 .hero-center h1 {
-  font-size: clamp(1.3rem, 2.6vw, 2.1rem);
+  font-size: clamp(1.3rem, 3.6vw, 2.1rem);
   font-weight: 600;
   color: white;
   line-height: 1.15;
@@ -314,11 +314,11 @@ nav {
 }
 
 .hero-center p {
-  color: rgba(255,255,255,0.5);
+  color: white;
   font-size: 0.8rem;
   font-weight: 300;
   line-height: 1.7;
-  max-width: 230px;
+  max-width: 330px;
   margin-bottom: 28px;
 }
 
@@ -331,7 +331,7 @@ nav {
   font-family: 'Figtree', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
-  padding: 14px 28px;
+  padding: 22px 52px;
   border-radius: 50px;
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;

@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 tl.to('#hero-title',  { opacity: 1, y: 0, duration: 0.7 }, 0.15)
   .to('#hero-logo',   { opacity: 1, y: 0, duration: 0.7 }, 0.35)
-  .to('#hero-wave',   { opacity: 1, y: 0, duration: 0.7 }, 0.52)
+  .to('#hero-wave',   { opacity: 0.5, y: 0, duration: 0.7 }, 0.52)
   .to('#hero-sub',    { opacity: 1, y: 0, duration: 0.7 }, 0.70)
   .to('#photo-left',  { opacity: 1, y: 0, duration: 0.9 }, 0.42)
   .to('#photo-right', { opacity: 1, y: 0, duration: 0.9 }, 0.55);
