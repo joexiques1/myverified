@@ -182,12 +182,12 @@ nav.nav-scrolled .nav-logo {
   padding:10px;
 }
 
-.hero-photo.right .chat-overlay { align-items: flex-end; }
+.hero-photo.right .chat-overlay { align-items: center; }
 
 .hero-photo.right .chat-bubble { background: #1f232d; }
 .hero-photo.right .chat-bubble .bubble-text { color: white; }
 
-.hero-photo.left .chat-overlay { align-items: flex-start; }
+.hero-photo.left .chat-overlay { align-items: center; }
 
 .chat-bubble {
   display: inline-block;
