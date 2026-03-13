@@ -168,7 +168,7 @@ nav {
   background: white;
   border-radius: 16px;
   padding: 20px;
-  max-width: 94%;
+  max-width: 99.99%;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.45s ease, transform 0.45s ease;
