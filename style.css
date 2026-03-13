@@ -65,7 +65,7 @@ nav.nav-scrolled .nav-logo {
 .nav-links { display: flex; gap: 56px; list-style: none; }
 
 .nav-links a {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255);
   text-decoration: none;
   font-size: 0.65rem;
   font-weight: 600;
@@ -78,7 +78,7 @@ nav.nav-scrolled .nav-logo {
 .nav-right { display: flex; align-items: center; gap: 56px; }
 
 .nav-login {
-  color: rgba(255,255,255,0.65);
+  color:  rgba(255, 255, 255);
   font-size: 0.65rem;
   font-weight: 600;
   text-decoration: none;
