@@ -17,19 +17,6 @@ tl.to('#hero-title',  { opacity: 1, y: 0, duration: 1.2 }, 0.5)
 
 // ── SCROLL ANIMATIONS ──
 
-// Hero content shrinks and fades as section-reach scrolls over it (background stays full opacity)
-gsap.to('.hero-content', {
-  scale: 0.82,
-  opacity: 0,
-  transformOrigin: 'center center',
-  ease: 'none',
-  scrollTrigger: {
-    trigger: '.section-reach',
-    start: 'top 65%',
-    end: 'top 10%',
-    scrub: true,
-  }
-});
 
 // Section reach: dramatic per-section stagger (h2 then p, each with its own wait)
 document.querySelectorAll('.section-reach').forEach(section => {
