@@ -515,6 +515,7 @@ nav.nav-scrolled .nav-logo {
   overflow: hidden;
   opacity: 0;
   border: 5px solid #8f9eb347;
+  text-align:left;
 }
 
 .section-analytics::before {
@@ -526,7 +527,7 @@ nav.nav-scrolled .nav-logo {
   pointer-events: none;
 }
 
-.analytics-text h2 { font-size: clamp(1.1rem, 2.1vw, 1.85rem); font-weight: 600; color: white; line-height: 1.25; margin-bottom: 16px; max-width: 500px; }
+.analytics-text h2 { font-size: clamp(1.1rem, 2.1vw, 1.85rem); font-weight: 600; color: white; line-height: 1.25; margin: 0px 0px 16px; max-width: 500px; }
 .analytics-text p  { color: var(--gray-dim); font-size: 0.8rem; font-weight: 300; line-height: 1.7; max-width: 500px; }
 
 /* ── ANALYTICS SLIDES ── */
