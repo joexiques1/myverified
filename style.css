@@ -154,8 +154,8 @@ nav.nav-scrolled .nav-logo {
   align-items: center;
   justify-content: center;
   padding: 28px 24px 28px;
-    background: rgb(42 86 180 / 11%);
-    box-shadow: 0 0 40px #0000007a;
+  background: rgb(42 86 180 / 11%);
+  box-shadow: 0 0 40px #0000007a;
   text-decoration: none;
   transition: background 0.25s;
 }
