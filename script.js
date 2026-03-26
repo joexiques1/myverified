@@ -1,11 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// ── NAV SCROLL BEHAVIOR ──
-const nav = document.getElementById('main-nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('nav-scrolled', window.scrollY > 60);
-}, { passive: true });
-
 // ── HERO LOAD-IN ──
 const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 tl.to('.hero-center', { opacity: 1, duration: 0.9 }, 0.3)
