@@ -871,14 +871,37 @@ body.is-subpage #main-nav .nav-logo { opacity: 1; pointer-events: auto; }
 
 /* ── ABOUT HERO ── */
 .about-hero {
-  background:
-    linear-gradient(180deg, rgba(10,10,15,0.72) 0%, rgba(22,31,57,0.88) 100%),
-    url('img/about-hero-bg.jpg') center / cover no-repeat;
+  background: #0a0a0f;
   padding: 220px 80px 120px;
   text-align: center;
   position: relative;
+  overflow: hidden;
   z-index: 2;
-  min-height:100vh;
+  min-height: 100vh;
+}
+
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('img/about-hero-bg.jpg') center / cover no-repeat;
+  z-index: 0;
+  opacity: 0;
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,15,0.72) 0%, rgba(22,31,57,0.88) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-hero .eyebrow,
+.about-hero h1,
+.about-hero > p {
+  position: relative;
+  z-index: 2;
 }
 
 .about-hero h1 {
