@@ -19,8 +19,7 @@
 <div id="header-placeholder"></div>
 
 <section class="about-hero">
-  <h1>The AI World can be dangerous and uncertain.</h1>
-  <p class="about-hero-lead">MyVerified is dedicated to creating a digital future based on authenticity and confidence — building safety, creator control, and real human connection.</p>
+  <h1><span class="h1-line1">The AI World can be <span style="color:#ffa4a4">dangerous</span> and <span style="color:#ffa4a4">uncertain</span>.</span><br><br><span class="h1-line2"><img src="img/my-verified-logo.png" alt="MyVerified" class="h1-inline-logo"> is dedicated to creating a digital future based on authenticity and confidence — building safety, creator control, and real human connection.</span></h1>
   <div class="about-hero-body">
     <p>MyVerified is a conversation platform by which content creators of all types can build and train AI-powered digital personas of themselves designed to interact with followers on a 24/7 basis, simultaneously expanding their reach to new users and deepening relationships with their existing fan bases.</p>
     <p>Creators range from celebrities and influencers, for whom MyVerified is additive to their current media footprint, to people who don't have any media presence but have interesting skills or content they'd like to share. MyVerified takes content, which historically has been delivered to audiences in a one-way direction, and makes that content come alive in two-way personalized conversations between the artist/teacher/author and the fan.</p>
@@ -29,7 +28,7 @@
   </div>
 </section>
 
-<section class="section-team">
+<section class="section-team" id="section-team">
   <h2 class="gsap-fade">Our Team</h2>
   <div class="team-list">
 
@@ -207,9 +206,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 // ── HERO LOAD-IN ──
 gsap.timeline({ defaults: { ease: 'power3.out' } })
-  .fromTo('.about-hero h1',         { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.1 }, 0.3)
-  .fromTo('.about-hero-lead',       { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9 }, 0.7)
-  .fromTo('.about-hero-body',       { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9 }, 1.0);
+  .fromTo('.h1-line1',        { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.0 }, 0.3)
+  .fromTo('.h1-line2',        { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 1.0 }, 0.75)
+  .fromTo('.about-hero-body', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9 }, 1.2);
 
 // ── SCROLL FADES (.gsap-fade) ──
 document.querySelectorAll('.gsap-fade').forEach(function(el) {

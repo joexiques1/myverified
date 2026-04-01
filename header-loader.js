@@ -1,7 +1,11 @@
 (function () {
   var NAV_HTML = '<nav id="main-nav">' +
     '<ul class="nav-links">' +
-      '<li><a href="about.html" data-nav="about">About</a></li>' +
+      '<li class="nav-has-dropdown"><a href="about.html" data-nav="about">About</a>' +
+        '<ul class="nav-dropdown">' +
+          '<li><a href="about.html#section-team">Our Team</a></li>' +
+        '</ul>' +
+      '</li>' +
       '<li><a href="creators.html" data-nav="creators">Creators</a></li>' +
       '<li><a href="subscribers.html" data-nav="subscribers">Subscribers</a></li>' +
     '</ul>' +
