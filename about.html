@@ -12,31 +12,21 @@
 <script src="header-loader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="gsap-utils.js"></script>
 </head>
 <body class="is-subpage" data-page="about">
 
 <div id="header-placeholder"></div>
 
 <section class="about-hero">
-  <span class="eyebrow">About Us</span>
   <h1>The AI World can be dangerous and uncertain.</h1>
-  <p>MyVerified is dedicated to creating a digital future based on authenticity and confidence. We create safety, creator control, and real human connection.</p>
-</section>
-
-<section class="section-content">
-  <p class="lead-text gsap-fade">MyVerified is a <a href="creators.html">conversation platform</a></p>
-  <p class="body-copy gsap-fade">by which content creators of all types can build and train AI-powered digital personas of themselves designed to interact with followers on a 24/7 basis, simultaneously expanding their reach to new users and deepening relationships with their existing fan bases.</p>
-  <p class="body-copy gsap-fade">Creators range from celebrities and influencers, for whom MyVerified is additive to their current media footprint, to people who don't have any media presence but have interesting skills or content they'd like to share. MyVerified takes content, which historically has been delivered to audiences in a one-way direction, and makes that content come alive in two-way personalized conversations between the artist/teacher/author and the fan.</p>
-
-  <!-- TODO: Replace with actual in-app screenshots (3 images side by side) -->
-  <div class="screenshots-row">
-    <img src="img/data-slider-1.jpg" alt="MyVerified App">
-    <img src="img/data-slider-2.jpg" alt="MyVerified App">
-    <img src="img/data-slider-3.jpg" alt="MyVerified App">
+  <p class="about-hero-lead">MyVerified is dedicated to creating a digital future based on authenticity and confidence — building safety, creator control, and real human connection.</p>
+  <div class="about-hero-body">
+    <p>MyVerified is a conversation platform by which content creators of all types can build and train AI-powered digital personas of themselves designed to interact with followers on a 24/7 basis, simultaneously expanding their reach to new users and deepening relationships with their existing fan bases.</p>
+    <p>Creators range from celebrities and influencers, for whom MyVerified is additive to their current media footprint, to people who don't have any media presence but have interesting skills or content they'd like to share. MyVerified takes content, which historically has been delivered to audiences in a one-way direction, and makes that content come alive in two-way personalized conversations between the artist/teacher/author and the fan.</p>
+    <p>The platform allows creators to monetize their content in a variety of ways — from viewership on the platform itself to promoting and curating existing revenue streams, which they can market and target to individual followers with whom they're creating more personalized relationships through their interactions on the platform.</p>
+    <p>For consumers, MyVerified only allows approved and verifiable creators to participate, so followers know they're having unique and private conversations with the authentic owner of the content in which they're interested. For creators, MyVerified enables them to build, monitor, manage, and own their digital personas, so they control, leverage, and benefit from the AI revolution.</p>
   </div>
-
-  <p class="body-copy gsap-fade">The platform allows creators to monetize their content in a variety of ways — from viewership on the platform itself to promoting and curating existing revenue streams, which they can market and target to individual followers with whom they're creating more personalized relationships through their interactions on the platform.</p>
-  <p class="body-copy gsap-fade">For consumers, MyVerified only allows approved and verifiable creators to participate, so followers know they're having unique and private conversations with the authentic owner of the content in which they're interested. For creators, MyVerified enables them to build, monitor, manage, and own their digital personas, so they control, leverage, and benefit from the AI revolution.</p>
 </section>
 
 <section class="section-team">
@@ -215,22 +205,17 @@
 <script>
 gsap.registerPlugin(ScrollTrigger);
 
-// ── HERO LOAD-IN: sequential ──
+// ── HERO LOAD-IN ──
 gsap.timeline({ defaults: { ease: 'power3.out' } })
-  .fromTo('.about-hero .eyebrow', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, 0.3)
-  .fromTo('.about-hero h1',       { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.1 }, 0.55)
-  .fromTo('.about-hero > p',      { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9 }, 0.9);
+  .fromTo('.about-hero h1',         { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.1 }, 0.3)
+  .fromTo('.about-hero-lead',       { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9 }, 0.7)
+  .fromTo('.about-hero-body',       { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.9 }, 1.0);
 
 // ── SCROLL FADES (.gsap-fade) ──
 document.querySelectorAll('.gsap-fade').forEach(function(el) {
   gsap.fromTo(el, { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out',
     scrollTrigger: { trigger: el, start: 'top 82%', once: true } });
 });
-
-// ── SCREENSHOTS ROW: staggered ──
-gsap.fromTo('.screenshots-row img', { opacity: 0, y: 40 },
-  { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0.14,
-    scrollTrigger: { trigger: '.screenshots-row', start: 'top 85%', once: true } });
 
 // ── TEAM MEMBERS: each fades in as it scrolls into view ──
 document.querySelectorAll('.team-member').forEach(function(member) {

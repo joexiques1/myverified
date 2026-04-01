@@ -12,24 +12,49 @@
 <script src="header-loader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="gsap-utils.js"></script>
 </head>
 <body class="is-subpage dark-bg" data-page="subscribers">
 
 <div id="header-placeholder"></div>
 
 <!-- HERO -->
-<section class="page-hero">
+<section class="page-hero page-hero-centered">
+  <div class="page-hero-bg" style="background-image: url('img/subscriber-background.jpg');"></div>
   <div class="page-hero-text">
-    <span class="eyebrow">For Subscribers</span>
-    <h1>Real people. Real knowledge. Real conversations.</h1>
+    <h1>Subscribers</h1>
     <p class="hero-sub">Interact with and learn from experts in your field.</p>
-    <a href="#" class="btn-get-started">Get Started &rarr;</a>
+    <a href="#" class="btn-get-started">Sign Up &rarr;</a>
   </div>
-  <div class="page-hero-media">
-    <!-- TODO: Replace with actual app chat screenshot → img/app-subscribers-hero.jpg -->
-    <img class="app-img" src="img/chat-screenshot.jpg" alt="MyVerified App">
-    <!-- TODO: Replace with subscriber profile photo → img/profile-subscriber-hero.jpg -->
-    <img class="avatar-img" src="img/subscriber-hero.jpg" alt="Subscriber">
+  <div class="hero-fields-row">
+    <div class="field-card">
+      <img src="img/field-creative.jpg" alt="Creative">
+      <div class="field-card-label">
+        <h3>Creative</h3>
+        <p>music, writing, visual art, performance</p>
+      </div>
+    </div>
+    <div class="field-card">
+      <img src="img/field-education.jpg" alt="Education">
+      <div class="field-card-label">
+        <h3>Education</h3>
+        <p>teaching, coaching, mentoring</p>
+      </div>
+    </div>
+    <div class="field-card">
+      <img src="img/field-professional.jpg" alt="Professional">
+      <div class="field-card-label">
+        <h3>Professional</h3>
+        <p>business, technology, leadership</p>
+      </div>
+    </div>
+    <div class="field-card">
+      <img src="img/field-wellness.jpg" alt="Wellness">
+      <div class="field-card-label">
+        <h3>Wellness</h3>
+        <p>health, fitness, mindfulness</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -79,7 +104,7 @@
 
   <div class="pricing-grid">
 
-    <div class="pricing-card">
+    <div class="pricing-card trial">
       <h3>Trial Access</h3>
       <ul>
         <li>Limited introductory conversations</li>
@@ -93,7 +118,7 @@
       <ul>
         <li>Standard access to participating personas</li>
       </ul>
-      <a href="#" class="btn-get-started" style="font-size: 0.7rem; padding: 16px 32px;">Get Started &rarr;</a>
+      <a href="#" class="btn-get-started">Get Started &rarr;</a>
     </div>
 
     <div class="pricing-card featured">
@@ -103,7 +128,7 @@
         <li>Unlimited conversations</li>
         <li>In addition, creators will offer special promotions and programs for which price varies.</li>
       </ul>
-      <a href="#" class="btn-get-started" style="font-size: 0.7rem; padding: 16px 32px;">Get Started &rarr;</a>
+      <a href="#" class="btn-get-started">Get Started &rarr;</a>
     </div>
 
   </div>
@@ -187,10 +212,12 @@
 <script>
 gsap.registerPlugin(ScrollTrigger);
 
-// ── HERO LOAD-IN: text left first, image right second ──
+// ── HERO LOAD-IN: bg image first, then text, then field cards ──
 gsap.timeline({ defaults: { ease: 'power3.out' } })
-  .fromTo('.page-hero-text', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1 }, 0.3)
-  .fromTo('.page-hero-media', { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 1.4 }, 0.8);
+  .fromTo('.page-hero-bg',   { opacity: 0 },        { opacity: 1, duration: 1.4, ease: 'sine.inOut' }, 0)
+  .fromTo('.page-hero-text', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1 },                 0.9)
+  .fromTo('.hero-fields-row .field-card', { opacity: 0, y: 40 },
+    { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0.1 },                             1.5);
 
 // ── SCROLL FADES (.gsap-fade) ──
 document.querySelectorAll('.gsap-fade').forEach(function(el) {
@@ -218,6 +245,7 @@ gsap.fromTo('.section-video', { opacity: 0, y: 80 }, { opacity: 1, y: 0, duratio
 gsap.fromTo('.pricing-card', { opacity: 0, y: 30 },
   { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out', stagger: 0.12,
     scrollTrigger: { trigger: '.pricing-grid', start: 'top 85%', once: true } });
+
 
 // ── FOOTER ──
 gsap.fromTo('footer', { opacity: 0 }, { opacity: 1, duration: 0.6,

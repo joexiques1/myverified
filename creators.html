@@ -12,35 +12,59 @@
 <script src="header-loader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="gsap-utils.js"></script>
 </head>
 <body class="is-subpage dark-bg" data-page="creators">
 
 <div id="header-placeholder"></div>
 
 <!-- HERO -->
-<section class="page-hero">
+<section class="page-hero page-hero-centered">
+  <div class="page-hero-bg" style="background-image: url('img/creator-background.jpg');"></div>
   <div class="page-hero-text">
-    <span class="eyebrow">For Creators</span>
-    <h1>Create Your Verified Digital Persona</h1>
+    <h1>Creators</h1>
     <p class="hero-sub">You create it. You approve it. You control it.</p>
-    <a href="#" class="btn-get-started">Get Started &rarr;</a>
+    <a href="#" class="btn-get-started">Sign Up &rarr;</a>
   </div>
-  <div class="page-hero-media">
-    <!-- TODO: Replace with actual app chat screenshot → img/app-creators-hero.jpg -->
-    <img class="app-img" src="img/chat-screenshot.jpg" alt="MyVerified App">
-    <!-- TODO: Replace with creator profile photo → img/profile-creator-hero.jpg -->
-    <img class="avatar-img" src="img/creator-hero.jpg" alt="Creator">
+  <div class="hero-fields-row">
+    <div class="field-card">
+      <img src="img/field-creative.jpg" alt="Creative">
+      <div class="field-card-label">
+        <h3>Creative</h3>
+        <p>music, writing, visual art, performance</p>
+      </div>
+    </div>
+    <div class="field-card">
+      <img src="img/field-education.jpg" alt="Education">
+      <div class="field-card-label">
+        <h3>Education</h3>
+        <p>teaching, coaching, mentoring</p>
+      </div>
+    </div>
+    <div class="field-card">
+      <img src="img/field-professional.jpg" alt="Professional">
+      <div class="field-card-label">
+        <h3>Professional</h3>
+        <p>business, technology, leadership</p>
+      </div>
+    </div>
+    <div class="field-card">
+      <img src="img/field-wellness.jpg" alt="Wellness">
+      <div class="field-card-label">
+        <h3>Wellness</h3>
+        <p>health, fitness, mindfulness</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- SECURE YOUR PERSONA -->
+<!-- SECURE YOUR PERSONA 
 <section class="section-content alt-bg" style="text-align: center;">
   <h2 class="lead-text gsap-fade">Secure the online personality of your authentic self.</h2>
   <p class="body-copy gsap-fade">MyVerified empowers creators, professionals, and public figures to build a verified digital persona using their own approved content — without losing ownership, voice, or authenticity.</p>
   <p class="body-copy gsap-fade" style="font-weight: 600;">This is not replacement AI. This is representation.</p>
 
-  <!-- Creator personas row -->
-  <!-- TODO: Replace placeholder circles with actual headshots -->
+
   <div class="persona-row">
     <div class="persona-item">
       <img src="img/team-laurie.jpg" alt="Laurie Segal">
@@ -59,14 +83,23 @@
       <span><strong>Rick Danish</strong>Journalist</span>
     </div>
   </div>
+</section> -->
+
+<!-- HOW IT WORKS -->
+<section class="section-reach">
+  <h2 class="gsap-fade">How It Works</h2>
+  <p class="gsap-fade">Apply as a Creator, verify your identity, approve your content sources, then launch your verified persona. Update and refine it anytime. You're always in control.</p>
+  <!-- TODO: Replace with app persona screenshot → img/app-how-it-works-creators.jpg -->
+  <img  class="wipe-fade" src="img/arrow-screenshot.png" alt="MyVerified Creator App" style="max-width: 1100px; border-radius: 20px;">
 </section>
 
 <!-- WHAT IS A VERIFIED DIGITAL PERSONA (Slider) -->
 <section class="section-slider">
 
 
-  <h2 class="gsap-fade">A platform ready-built for modern creators.</h2>
-  <p class="gsap-fade">Strategic momentum that accelerates growth outcomes and elevates what your organization can achieve.</p>
+  <h2 class="lead-text gsap-fade">Secure the online personality of your authentic self.</h2>
+  <p class="body-copy gsap-fade">MyVerified empowers creators, professionals, and public figures to build a verified digital persona using their own approved content — without losing ownership, voice, or authenticity.</p>
+  <p class="body-copy gsap-fade" style="font-weight: 600;">This is not replacement AI. This is representation.</p>
 
   <div class="section-analytics">
     <div class="analytics-slides">
@@ -112,6 +145,8 @@
   </div>
 </section>
 
+
+
 <!-- WHY CREATORS CHOOSE MYVERIFIED -->
 <section class="section-content light-bg">
   <div class="two-col">
@@ -125,65 +160,14 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="section-reach">
-  <h2 class="gsap-fade">How It Works</h2>
-  <p class="gsap-fade">Apply as a Creator, verify your identity, approve your content sources, then launch your verified persona. Update and refine it anytime. You're always in control.</p>
-  <!-- TODO: Replace with app persona screenshot → img/app-how-it-works-creators.jpg -->
-  <img class="section-video" src="img/verification-screenshot.jpg" alt="MyVerified Creator App" style="max-width: 680px; border-radius: 20px;">
-</section>
 
-<!-- CREATOR FIELDS -->
-<section class="section-content" style="text-align: center;">
-  <h2 class="lead-text gsap-fade">Creator Fields</h2>
-  <p class="body-copy gsap-fade">MyVerified is built for creators and professionals whose knowledge or creative work benefits from direct, trusted interaction.</p>
-  <a href="#" class="btn-get-started gsap-fade" style="margin-bottom: 56px; display: inline-flex;">Get Started &rarr;</a>
 
-  <div class="fields-grid">
-    <div class="field-card">
-      <img src="img/field-creative.jpg" alt="Creative">
-      <div class="field-card-label">
-        <h3>Creative</h3>
-        <p>music, writing, visual art, performance</p>
-      </div>
-    </div>
-    <div class="field-card">
-      <img src="img/field-education.jpg" alt="Education">
-      <div class="field-card-label">
-        <h3>Education</h3>
-        <p>teaching, coaching, mentoring</p>
-      </div>
-    </div>
-    <div class="field-card">
-      <img src="img/field-professional.jpg" alt="Professional">
-      <div class="field-card-label">
-        <h3>Professional</h3>
-        <p>business, technology, leadership</p>
-      </div>
-    </div>
-    <div class="field-card">
-      <img src="img/field-wellness.jpg" alt="Wellness">
-      <div class="field-card-label">
-        <h3>Wellness</h3>
-        <p>health, fitness, mindfulness</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DUAL CTA -->
+<!-- CTA -->
 <section class="section-dual-cta">
-  <div class="dual-cta-grid">
-    <div class="cta-card light">
-      <h3>Start Exploring</h3>
-      <p>Discover conversations that feel personal, informed, and authentic — all in one place.</p>
-      <a href="subscribers.html" class="btn-get-started btn-light">Get Started &rarr;</a>
-    </div>
-    <div class="cta-card dark-card">
-      <h3>Ready to create your persona?</h3>
-      <p>Join a platform that puts creators first — and keeps your voice authentically yours.</p>
-      <a href="#" class="btn-get-started">Get Started &rarr;</a>
-    </div>
+  <div class="cta-card light cta-full">
+    <h3>Ready to create your persona?</h3>
+    <p>Join a platform that puts creators first — and keeps your voice authentically yours.</p>
+    <a href="#" class="btn-get-started">Get Started &rarr;</a>
   </div>
 </section>
 
@@ -265,10 +249,12 @@
 <script>
 gsap.registerPlugin(ScrollTrigger);
 
-// ── HERO LOAD-IN: text left first, image right second ──
+// ── HERO LOAD-IN: bg image first, then text, then field cards ──
 gsap.timeline({ defaults: { ease: 'power3.out' } })
-  .fromTo('.page-hero-text', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1 }, 0.3)
-  .fromTo('.page-hero-media', { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 1.4 }, 0.8);
+  .fromTo('.page-hero-bg', { opacity: 0 }, { opacity: 1, duration: 1.4, ease: 'sine.inOut' }, 0)
+  .fromTo('.page-hero-text', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1 }, 0.9)
+  .fromTo('.hero-fields-row .field-card', { opacity: 0, y: 40 },
+    { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0.1 }, 1.5);
 
 // ── SCROLL FADES (.gsap-fade) ──
 document.querySelectorAll('.gsap-fade').forEach(function(el) {
@@ -295,15 +281,10 @@ gsap.fromTo('.two-col-img', { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration:
 gsap.fromTo('.section-video', { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 1.6, ease: 'power3.out',
   scrollTrigger: { trigger: '.section-video', start: 'top 72%', once: true } });
 
-// ── FIELD CARDS: staggered ──
-gsap.fromTo('.field-card', { opacity: 0, y: 30 },
-  { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out', stagger: 0.1,
-    scrollTrigger: { trigger: '.fields-grid', start: 'top 85%', once: true } });
-
-// ── CTA CARDS: staggered ──
+// ── CTA ──
 gsap.fromTo('.cta-card', { opacity: 0, y: 30 },
-  { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out', stagger: 0.15,
-    scrollTrigger: { trigger: '.dual-cta-grid', start: 'top 88%', once: true } });
+  { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out',
+    scrollTrigger: { trigger: '.cta-card', start: 'top 88%', once: true } });
 
 // ── FOOTER ──
 gsap.fromTo('footer', { opacity: 0 }, { opacity: 1, duration: 0.6,
