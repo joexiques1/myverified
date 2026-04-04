@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="img/favicon-2.png">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script src="header-loader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
@@ -23,36 +24,40 @@
   <div class="page-hero-bg" style="background-image: url('img/creator-background.jpg');"></div>
   <div class="page-hero-text">
     <h1>Creators</h1>
-    <p class="hero-sub">You create it. You approve it. You control it.</p>
-    <a href="#" class="btn-get-started">Sign Up &rarr;</a>
+    <p class="hero-sub">Build a verified persona from content you already have, earn 70% of every subscriber fee, and stay in control of how you show up. Your voice, your revenue, your rules. You create it. You approve it. You control it.</p>
+    <a href="#" class="btn-get-started">Sign Up <i class="fa-solid fa-arrow-right-long"></i></a>
   </div>
   <div class="hero-fields-row">
-    <div class="field-card">
+    <div class="field-card"
+      data-story="Placeholder story for the Creative creator. Tell the world about the musician, writer, visual artist, or performer behind this persona — what drives them, how they got here, and what subscribers can expect to discover in a real conversation with them.">
       <img src="img/field-creative.jpg" alt="Creative">
       <div class="field-card-label">
-        <h3>Creative</h3>
-        <p>music, writing, visual art, performance</p>
+        <h3>Yaron Spiwak</h3>
+        <p>Music Creator</p>
       </div>
     </div>
-    <div class="field-card">
+    <div class="field-card"
+      data-story="Placeholder story for the Education creator. Share the background of the teacher, coach, or mentor behind this persona — their methodology, what they've learned, and why having a direct conversation with them is something subscribers can't get anywhere else.">
       <img src="img/field-education.jpg" alt="Education">
       <div class="field-card-label">
-        <h3>Education</h3>
-        <p>teaching, coaching, mentoring</p>
+        <h3>Deana Moss</h3>
+        <p>Leadership Instructor</p>
       </div>
     </div>
-    <div class="field-card">
+    <div class="field-card"
+      data-story="Placeholder story for the Professional creator. Describe the executive, entrepreneur, or thought leader behind this persona — their career, their hard-won insights, and what subscribers stand to gain by going deeper than a LinkedIn profile or a podcast episode.">
       <img src="img/field-professional.jpg" alt="Professional">
       <div class="field-card-label">
-        <h3>Professional</h3>
-        <p>business, technology, leadership</p>
+        <h3>Jennifer Li</h3>
+        <p>IT Specialist</p>
       </div>
     </div>
-    <div class="field-card">
+    <div class="field-card"
+      data-story="Placeholder story for the Wellness creator. Introduce the trainer, nutritionist, or mindfulness guide behind this persona — their philosophy, their personal journey, and how direct conversations with them go beyond what any video or blog post can offer.">
       <img src="img/field-wellness.jpg" alt="Wellness">
       <div class="field-card-label">
-        <h3>Wellness</h3>
-        <p>health, fitness, mindfulness</p>
+        <h3>Patrick O'Donovan</h3>
+        <p>Fitness Coach</p>
       </div>
     </div>
   </div>
@@ -96,32 +101,38 @@ Update and refine it anytime. You're always in control.</p>
 
 
 
-
-<!-- WHY CREATORS CHOOSE MYVERIFIED -->
-<section class="section-content light-bg">
-  <div class="two-col">
-    <div class="two-col-text">
-      <h2 class="gsap-fade">Why Creators Choose MyVerified</h2>
-      <p class="gsap-fade">Creators choose MyVerified for full control over their persona's content, verified identity with protection from impersonation, and clear boundaries between themselves and AI usage. New engagement and revenue opportunities include music, books, courses, digital downloads, live events, consultations, merchandise, memberships, and more — alongside long-term protection of your digital legacy and reputation.</p>
-      <a href="#" class="btn-get-started gsap-fade">Get Started &rarr;</a>
+<section class="section-slider">
+  <h2 class="gsap-fade">How It Looks</h2>
+  <p class="gsap-fade">A platform built to understand your subscribers, reach them with what matters, and make sure your persona sounds exactly like you. All while earning directly from every interaction.</p>
+  <a href="#" class="btn-get-started">Get Started <i class="fa-solid fa-arrow-right-long"></i></a>
+  <br><br><br><br>
+  <div class="cards-grid cards-grid-4">
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+      <h3><span>Analytics</span></h3>
+      <p>See how subscribers engage with your persona: what they ask, what resonates, where conversations go.</p>
     </div>
-    <!-- TODO: Replace with lifestyle photo (creator at work) → img/lifestyle-creator.jpg -->
-    <img src="img/creator-hero.jpg" alt="Creator at work" class="two-col-img">
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-coins"></i></div>
+      <h3><span>Monetization</span></h3>
+      <p>Earn 70% of every subscriber fee. The bigger your audience grows, the more your persona earns for you.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-ticket"></i></div>
+      <h3><span>Merch & Events</span></h3>
+      <p>Promote your music, products, events, and more directly to the subscribers most likely to show up and buy.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-sliders"></i></div>
+      <h3><span>Your Personality</span></h3>
+      <p>Fine-tune your persona until it sounds exactly like you. Your voice, your tone, your way. Say goodbye to generic AI.</p>
+    </div>
   </div>
+
+   
 </section>
 
 
-
-
-
-<!-- CTA -->
-<section class="section-dual-cta">
-  <div class="cta-card light cta-full">
-    <h3>Ready to create your persona?</h3>
-    <p>Join a platform that puts creators first — and keeps your voice authentically yours.</p>
-    <a href="#" class="btn-get-started">Get Started &rarr;</a>
-  </div>
-</section>
 
 <footer id="main-footer">
   <div class="footer-top">
@@ -256,6 +267,93 @@ function goTo(n) {
 document.querySelector('.slider-prev').addEventListener('click', function() { goTo(current - 1); });
 document.querySelector('.slider-next').addEventListener('click', function() { goTo(current + 1); });
 dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(i); }); });
+</script>
+
+<!-- FIELD MODAL -->
+<div id="field-overlay"></div>
+<div id="field-modal">
+  <div class="field-modal-img-wrap">
+    <img id="field-modal-img" src="" alt="">
+    <div class="field-modal-gradient"></div>
+    <div class="field-modal-img-text">
+      <p id="field-modal-discipline"></p>
+      <h2 id="field-modal-name"></h2>
+    </div>
+    <button id="field-modal-close"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="field-modal-body">
+    <p id="field-modal-story"></p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var overlay   = document.getElementById('field-overlay');
+  var modal     = document.getElementById('field-modal');
+  var modalImg  = document.getElementById('field-modal-img');
+  var modalGrad = modal.querySelector('.field-modal-gradient');
+  var modalName = document.getElementById('field-modal-name');
+  var modalDisc = document.getElementById('field-modal-discipline');
+  var modalText = document.getElementById('field-modal-story');
+  var modalImgText = modal.querySelector('.field-modal-img-text');
+  var closeBtn  = document.getElementById('field-modal-close');
+  var imgWrap   = modal.querySelector('.field-modal-img-wrap');
+
+  function openModal(card) {
+    var navH = document.getElementById('main-nav') ? document.getElementById('main-nav').offsetHeight : 80;
+    var targetH = window.innerHeight - navH;
+    var imgH = Math.round(targetH * 0.48);
+
+    // Populate content
+    modalImg.src = card.querySelector('img').src;
+    modalName.textContent = card.querySelector('.field-card-label h3').textContent;
+    modalDisc.textContent = card.querySelector('.field-card-label p').textContent;
+    modalText.textContent = card.dataset.story || '';
+
+    // Size and position modal at final dimensions, fully transparent
+    gsap.set(imgWrap, { height: imgH });
+    gsap.set(modal, {
+      display: 'flex',
+      left: 0,
+      top: navH,
+      width: window.innerWidth,
+      height: targetH,
+      borderRadius: 0,
+      opacity: 0
+    });
+
+    // Fade everything in
+    gsap.set(overlay, { pointerEvents: 'auto' });
+    gsap.to(overlay, { opacity: 1, duration: 0.7, ease: 'power2.out' });
+    gsap.to(modal,   { opacity: 1, duration: 0.7, ease: 'power2.out' });
+  }
+
+  function closeModal() {
+    gsap.to(modal, {
+      opacity: 0,
+      duration: 0.6,
+      ease: 'power2.in',
+      onComplete: function () { gsap.set(modal, { display: 'none' }); }
+    });
+    gsap.to(overlay, {
+      opacity: 0,
+      duration: 0.6,
+      ease: 'power2.in',
+      onComplete: function () { gsap.set(overlay, { pointerEvents: 'none' }); }
+    });
+  }
+
+  document.querySelectorAll('.field-card').forEach(function (card) {
+    card.addEventListener('click', function () { openModal(card); });
+  });
+
+  closeBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    closeModal();
+  });
+
+  overlay.addEventListener('click', closeModal);
+})();
 </script>
 
 </body>

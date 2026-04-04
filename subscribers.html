@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="img/favicon-2.png">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script src="header-loader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
@@ -23,8 +24,8 @@
   <div class="page-hero-bg" style="background-image: url('img/subscriber-background.jpg');"></div>
   <div class="page-hero-text">
     <h1>Subscribers</h1>
-    <p class="hero-sub">Interact with and learn from authentic, verified experts in your field. Get the chance to speak with leaders and celebrities and learn from their path to success.</p>
-    <a href="#" class="btn-get-started">Sign Up &rarr;</a>
+    <p class="hero-sub">Subscribe to verified personas from the creators, experts, and public figures you follow most. Ask the questions you've never had the chance to ask, and get answers grounded in their real work and experience.</p>
+    <a href="#" class="btn-get-started">Sign Up <i class="fa-solid fa-arrow-right-long"></i></a>
   </div>
   <div class="persona-scroll-wrap">
     <div class="persona-row persona-row-fill">
@@ -63,6 +64,7 @@
     <!-- TODO: Replace with lifestyle photo (person using phone) → img/lifestyle-subscriber.jpg -->
     <img src="img/subscriber-hero.jpg" alt="Person using MyVerified">
     <div class="two-col-text">
+      <h2 class="gsap-fade">What is MyVerified?</h2>
       <p>MyVerified lets you interact with your favorite creators on a 24/7 basis. Those creators have built digital versions of themselves, called MyVerified Personas, which are:</p>
       <ul class="bullet-list">
         <li>Based only on their content</li>
@@ -75,25 +77,27 @@
   </div>
 </section>
 
-<!-- WHAT WILL YOU TALK ABOUT -->
-<section class="section-analytics" style="margin: 0; border-radius: 0; border-left: none; border-right: none;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1100px; margin: 0 auto;">
-    <div class="analytics-text">
-      <h2 class="gsap-fade">What will you talk about?</h2>
-      <p class="gsap-fade">Today your interactions with your favorite creators are one-way. You watch them, you listen to them, you read them.</p>
-      <p class="gsap-fade" style="margin-top: 16px;">With MyVerified, you turn those interactions into two-way conversations. You get to know them. You ask them questions. You get to know their inspirations, insights, and deeper knowledge.</p>
-    </div>
-    <!-- TODO: Replace with app dashboard screenshot → img/app-dashboard-subscribers.jpg -->
-    <img class="slide-img" src="img/data-slider-2.jpg" alt="MyVerified Dashboard">
-  </div>
+
+
+<section class="section-reach">
+  <h2 class="gsap-fade">What will you talk about?</h2>
+  <p class="gsap-fade">Your relationship with your favorite creators has always been one-way. myVerified changes that. Ask questions, go deeper, and get access to the knowledge behind the content you love.</p>
+
+  
+  <video class="section-video" autoplay muted loop playsinline>
+    <source src="img/demo-1.mp4" type="video/mp4">
+  </video>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="section-reach">
+
+
+
+<section class="section-reach" style="background: #0c0d16;">
   <h2 class="gsap-fade">How It Works</h2>
   <p class="gsap-fade">Browse or receive a link to a verified persona, sign in or create a subscriber account, and start chatting instantly — no setup required.</p>
-  <!-- TODO: Replace with app persona screenshot → img/app-how-it-works-subscribers.jpg -->
-  <img class="section-video" src="img/data-slider-3.jpg" alt="MyVerified App" style="max-width: 680px; border-radius: 20px;">
+
+  
+  <img class="section-video" src="img/subscriber-mockup.jpg" alt="How MyVerified Works" style="max-width: 720px;">
 </section>
 
 <!-- SUBSCRIBER FEES -->
@@ -117,7 +121,7 @@
       <ul>
         <li>Standard access to participating personas</li>
       </ul>
-      <a href="#" class="btn-get-started">Get Started &rarr;</a>
+      <a href="#" class="btn-get-started">Get Started <i class="fa-solid fa-arrow-right-long"></i></a>
     </div>
 
     <div class="pricing-card featured">
@@ -127,7 +131,7 @@
         <li>Unlimited conversations</li>
         <li>In addition, creators will offer special promotions and programs for which price varies.</li>
       </ul>
-      <a href="#" class="btn-get-started">Get Started &rarr;</a>
+      <a href="#" class="btn-get-started">Get Started <i class="fa-solid fa-arrow-right-long"></i></a>
     </div>
 
   </div>
