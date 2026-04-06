@@ -65,10 +65,10 @@ document.querySelector('.slider-next').addEventListener('click', () => goToSlide
 sliderDots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
 
 // Footer fade
-gsap.fromTo('footer',
+gsap.fromTo('footer, .veriff-bar',
   { opacity: 0, y: 16 },
   { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
-    scrollTrigger: { trigger: '#main-footer', start: 'top 95%' } });
+    scrollTrigger: { trigger: '#main-footer', start: 'top bottom', once: true } });
 
 // ── STAGGERED CHAT ──
 const conversation = [
