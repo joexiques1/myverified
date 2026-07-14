@@ -97,7 +97,7 @@
   <p class="gsap-fade"> Apply as a Creator, verify your identity, upload and sync your social media content, then launch your verified persona. <br><br>
 Update and refine it anytime. You're always in control.</p>
   <!-- TODO: Replace with app persona screenshot → img/app-how-it-works-creators.jpg -->
-  <img  class="wipe-fade" src="img/arrow-screenshot.png" alt="MyVerified Creator App" style="max-width: 1100px; border-radius: 20px;">
+  <img  class="wipe-fade" src="img/arrow-screenshot.png" alt="MyVerified Creator App" style="width: 100%; max-width: 1100px; height: auto; border-radius: 20px;">
 </section>
 
 
@@ -323,7 +323,7 @@ dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(
 
 <!-- FIELD MODAL -->
 <div id="field-overlay"></div>
-<div id="field-modal">
+<div id="field-modal" role="dialog" aria-modal="true" aria-labelledby="field-modal-name">
   <div class="field-modal-img-wrap">
     <img id="field-modal-img" src="" alt="">
     <div class="field-modal-gradient"></div>
@@ -331,7 +331,7 @@ dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(
       <p id="field-modal-discipline"></p>
       <h2 id="field-modal-name"></h2>
     </div>
-    <button id="field-modal-close"><i class="fa-solid fa-xmark"></i></button>
+    <button id="field-modal-close" aria-label="Close story"><i class="fa-solid fa-xmark"></i></button>
   </div>
   <div class="field-modal-body">
     <p id="field-modal-story"></p>
@@ -352,10 +352,12 @@ dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(
   var imgWrap   = modal.querySelector('.field-modal-img-wrap');
 
   var originRect = null;
+  var originCard = null;
 
   function openModal(card) {
     var rect = card.getBoundingClientRect();
     originRect = rect;
+    originCard = card;
     var navH = document.getElementById('main-nav') ? document.getElementById('main-nav').offsetHeight : 80;
     var targetH = window.innerHeight - navH;
     var imgH = Math.round(targetH * 0.48);
@@ -405,6 +407,8 @@ dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(
       opacity: 1, duration: 0.35, stagger: 0.06, ease: 'power2.out'
     }, 0.45)
     .to('.field-modal-body', { opacity: 1, duration: 0.35, ease: 'power2.out' }, 0.5);
+
+    closeBtn.focus();
   }
 
   function closeModal() {
@@ -425,6 +429,7 @@ dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(
       delay: 0.1,
       onComplete: function () { gsap.set(modal, { display: 'none' }); }
     });
+    if (originCard) originCard.focus();
     gsap.to(imgWrap, { height: rect.height, duration: 0.5, ease: 'power3.inOut', delay: 0.1 });
     gsap.to(overlay, {
       opacity: 0, duration: 0.4, ease: 'power2.out',
@@ -433,7 +438,17 @@ dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(
   }
 
   document.querySelectorAll('.field-card').forEach(function (card) {
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    var name = card.querySelector('.field-card-label h3');
+    card.setAttribute('aria-label', 'Read ' + (name ? name.textContent : 'creator') + "'s story");
     card.addEventListener('click', function () { openModal(card); });
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(card);
+      }
+    });
   });
 
   closeBtn.addEventListener('click', function (e) {
@@ -442,6 +457,10 @@ dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(
   });
 
   overlay.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && originRect && modal.style.display === 'flex') closeModal();
+  });
 })();
 </script>
 

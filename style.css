@@ -102,6 +102,36 @@ nav.nav-scrolled .nav-logo {
 
 .btn-signup:hover { background: var(--blue-bright); }
 
+/* ── MOBILE NAV TOGGLE (hidden on desktop) ── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: white;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+nav.nav-open .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+nav.nav-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+nav.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Log In duplicate lives only in the mobile menu */
+.nav-links-login { display: none; }
+
 /* ── HERO ── */
 .hero {
   background: var(--hero-gradient);
@@ -650,7 +680,15 @@ body.dark-bg .card-icon i { color: white; }
   border: none;
   cursor: pointer;
   padding: 0;
+  position: relative;
   transition: background 0.25s, transform 0.25s;
+}
+
+/* Invisible expanded hit area so dots meet the 44px touch-target minimum */
+.slider-dot::after {
+  content: '';
+  position: absolute;
+  inset: -14px;
 }
 
 .slider-dot.active {
@@ -940,19 +978,101 @@ object-position: 0% 20%;
   height: 18px;
 }
 
+/* ── COMPACT NAV (≤1100px): centered logo collides with links, so switch to hamburger ── */
+@media (max-width: 1100px) {
+  nav { padding: 0 12px 0 8px; height: 64px; }
+  .nav-toggle { display: flex; }
+  .nav-logo { opacity: 1; pointer-events: auto; }
+  .nav-logo img { height: 32px; }
+  .nav-right { gap: 16px; }
+  .nav-login { display: none; }
+  nav.nav-open { background: #0A0A0F; }
+  body.menu-open { overflow: hidden; }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0A0A0F;
+    padding: 12px 8px 32px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  }
+
+  nav.nav-open .nav-links {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 16px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .nav-links-login { display: block; }
+}
+
+/* ── TABLET (769–1100px) ── */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .hero-center h1, .logo-container { padding: 0 28px; }
+  .section-slider, .section-reach { padding: 120px 32px 80px; }
+  .section-analytics { margin: 60px 32px; padding: 44px 36px 32px; }
+  .page-hero { padding: 140px 40px 60px; }
+  .about-hero { padding: 180px 40px 100px; }
+  .section-content, .section-team, .section-pricing { padding: 80px 40px; }
+  .section-dual-cta { padding: 64px 40px; }
+  .two-col { gap: 48px; }
+  .footer-top { grid-template-columns: repeat(4, 1fr); gap: 36px; padding: 56px 40px 48px; }
+  .footer-brand { grid-column: 1 / -1; max-width: 420px; }
+  .footer-bottom { padding: 28px 40px; }
+}
+
+/* Analytics slide stacks before the phone breakpoint so text never gets crushed */
+@media (max-width: 960px) {
+  .analytics-slide { grid-template-columns: 1fr; gap: 28px; }
+  .analytics-slide .slide-img { margin: 0 auto; max-width: 480px; width: 100%; }
+  .slider-controls { margin-top: 24px; }
+}
+
 @media (max-width: 768px) {
-  .hero { grid-template-columns: 1fr; min-height: 100svh; position: relative; }
+  .hero { grid-template-columns: 1fr; min-height: 100svh; position: relative; padding-top: 72px; }
   .hero-photo { display: none; }
+  .hero-center { padding: 32px 0; }
+  .hero-center h1, .logo-container { padding: 0 24px; }
+  .hero-center p { padding: 0 24px; }
+  .logo-img { max-height: 72px; }
+  .btn-get-started { padding: 16px 36px; }
+  .veriff-bar { padding: 18px 20px; flex-wrap: wrap; text-align: center; }
   .cards-grid { grid-template-columns: 1fr; }
-  .section-analytics { margin: 0 16px 60px; padding: 40px 24px 28px; }
+  .section-slider, .section-reach { padding: 88px 20px 64px; }
+  .section-analytics { margin: 48px 0 32px; padding: 36px 20px 28px; }
   .analytics-slide { grid-template-columns: 1fr; }
-  nav { padding: 0 20px; }
-  .nav-links { display: none; }
-  .section-video { width: calc(100% - 32px); border-radius: 16px; }
+  .section-video { width: 100%; border-radius: 16px; }
+
+  /* Field modal sized for small screens */
+  .field-modal-img-wrap { height: 300px !important; }
+  .field-modal-img-text { left: 24px; right: 24px; bottom: 20px; }
+  .field-modal-body { padding: 0 24px; }
+
   .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; padding: 48px 24px 40px; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column-reverse; gap: 20px; text-align: center; padding: 28px 24px; }
   .footer-newsletter-row { flex-direction: column; }
+  /* 16px minimum stops iOS Safari from zooming the page on focus */
+  .footer-newsletter-row input { font-size: 16px; }
+  .footer-newsletter-row button { padding: 14px 18px; }
+  .footer-col a { display: inline-block; padding: 2px 0; }
 }
 
 /* ── SUB-PAGE SHARED STYLES ── */
@@ -1503,13 +1623,16 @@ body.is-subpage #main-nav .nav-logo { opacity: 1; pointer-events: auto; }
   transition: flex 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
 }
 
-.hero-fields-row:has(.field-card:hover) .field-card:not(:hover) {
-  flex: 0.96;
-  filter: brightness(0.5);
-}
+/* Grow-on-hover only for devices with real hover — prevents sticky states on touchscreens */
+@media (hover: hover) and (pointer: fine) {
+  .hero-fields-row:has(.field-card:hover) .field-card:not(:hover) {
+    flex: 0.96;
+    filter: brightness(0.5);
+  }
 
-.field-card:hover {
-  flex: 1.125;
+  .field-card:hover {
+    flex: 1.125;
+  }
 }
 
 .field-card img {
@@ -1700,4 +1823,43 @@ body.dark-bg .pricing-card.featured {
 /* CTA light card on dark section */
 body.dark-bg .cta-card.light h3 {
   color: var(--blue);
+}
+
+/* ── FLUID MEDIA ── */
+img, video { max-width: 100%; }
+
+/* ── ACCESSIBILITY: visible keyboard focus ── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.field-card:focus-visible {
+  outline: 2px solid var(--blue-bright);
+  outline-offset: 3px;
+}
+
+.field-card { -webkit-tap-highlight-color: transparent; }
+
+/* ── ACCESSIBILITY: reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .waveform-wrap .bar,
+  .typing-dots span,
+  .persona-row-fill {
+    animation: none !important;
+  }
+
+  /* Marquee becomes a manually swipeable strip; duplicate loop items hidden */
+  .persona-scroll-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .persona-row-fill { padding: 0 24px; }
+  .persona-row-fill .persona-item:nth-child(n+13) { display: none; }
+
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+  }
 }

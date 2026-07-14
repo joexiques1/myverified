@@ -229,11 +229,14 @@ gsap.fromTo('footer', { opacity: 0 }, { opacity: 1, duration: 0.6,
 
 // ── READ MORE TOGGLES ──
 document.querySelectorAll('.read-more').forEach(function(btn) {
+  btn.setAttribute('role', 'button');
+  btn.setAttribute('aria-expanded', 'false');
   btn.addEventListener('click', function(e) {
     e.preventDefault();
     var extra = btn.previousElementSibling;
     var expanded = extra.classList.toggle('expanded');
     btn.textContent = expanded ? 'Read Less ↑' : 'Read More ↓';
+    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
   });
 });
 </script>
