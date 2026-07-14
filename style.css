@@ -1623,11 +1623,18 @@ body.is-subpage #main-nav .nav-logo { opacity: 1; pointer-events: auto; }
   transition: flex 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
 }
 
-/* Grow-on-hover only for devices with real hover — prevents sticky states on touchscreens */
+/* Dim effect: any real-hover device, any width */
 @media (hover: hover) and (pointer: fine) {
   .hero-fields-row:has(.field-card:hover) .field-card:not(:hover) {
-    flex: 0.96;
     filter: brightness(0.5);
+  }
+}
+
+/* Grow effect: real-hover devices only, and only above the 2-up mobile stack —
+   with just two cards per row the flex-grow/shrink swing looks lopsided */
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  .hero-fields-row:has(.field-card:hover) .field-card:not(:hover) {
+    flex: 0.96;
   }
 
   .field-card:hover {
@@ -1729,6 +1736,10 @@ body.is-subpage #main-nav .nav-logo { opacity: 1; pointer-events: auto; }
 @media (max-width: 768px) {
   .page-hero { grid-template-columns: 1fr; padding: 120px 24px 60px; min-height: auto; }
   .page-hero-media { display: none; }
+  /* Narrow crop centers on the photo's midpoint, which sits left of each subject's
+     face — shift the focal point right so the face stays in frame */
+  body[data-page="creators"] .page-hero-bg { background-position: 72% center; }
+  body[data-page="subscribers"] .page-hero-bg { background-position: 66% center; }
   .hero-fields-row { flex-wrap: wrap; }
   .hero-fields-row .field-card { flex: 1 1 calc(50% - 8px); }
   .about-hero { padding: 160px 24px 80px; }
@@ -1739,7 +1750,7 @@ body.is-subpage #main-nav .nav-logo { opacity: 1; pointer-events: auto; }
   .two-col { grid-template-columns: 1fr; gap: 40px; }
   .screenshots-row { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; }
-  .pricing-card.trial { flex-direction: column; gap: 20px; }
+  .pricing-card.trial { flex-direction: column; align-items: flex-start; gap: 20px; }
   .pricing-card.trial h3 { font-size: 1.3rem; }
   .fields-grid { grid-template-columns: 1fr; }
   .dual-cta-grid { grid-template-columns: 1fr; }
